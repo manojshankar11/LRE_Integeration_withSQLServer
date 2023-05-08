@@ -1,0 +1,20 @@
+
+LoadRunner Enterprise supports the integration with SQL Server to store performance testing results and data. Here are the steps to integrate LoadRunner Enterprise with SQL Server:
+
+Install SQL Server: First, you need to install and configure SQL Server on the server where you want to store the LoadRunner Enterprise database. You can download the latest version of SQL Server from the Microsoft website and follow the installation instructions.
+
+Create a database: After installing SQL Server, create a new database for LoadRunner Enterprise. You can use the SQL Server Management Studio tool to create a new database. Ensure that the database is configured to support the collation type and character set used by LoadRunner Enterprise.
+
+Install the SQL Server client: Install the SQL Server client on the LoadRunner Enterprise server to enable communication between the LoadRunner Enterprise server and the SQL Server database. You can download the SQL Server client from the Microsoft website.
+
+Configure the database connection: To configure the database connection, you need to modify the LR_DB_server.conf file on the LoadRunner Enterprise server. This file is located in the <LRE_HOME>/conf directory. You should update the file with the following details:
+
+DB Server Name: Name of the server where the SQL Server database is installed.
+Database Name: Name of the database you created in step 2.
+Database User ID and Password: Login credentials for the database.
+Port: Port number used for communication between the LoadRunner Enterprise server and the SQL Server database.
+Restart the LoadRunner Enterprise server: After making changes to the LR_DB_server.conf file, you need to restart the LoadRunner Enterprise server to apply the changes.
+
+Verify the database connection: To verify the database connection, you can open the LoadRunner Enterprise Administration Console and check if the connection status is "Connected". If there is an issue with the connection, you should review the configuration and check the logs for any errors.
+
+Once you have successfully integrated LoadRunner Enterprise with SQL Server, you can store and analyze performance testing data in the database.
